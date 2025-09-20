@@ -74,6 +74,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/TextOption"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:text="계산 방식 : "
+        android:textColor="#ff1493"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/TextResult"
         android:layout_weight="1"
         android:layout_margin="10dp"

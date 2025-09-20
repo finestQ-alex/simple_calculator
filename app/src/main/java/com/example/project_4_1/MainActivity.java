@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
     EditText edit1, edit2;
     Button btnAdd, btnSub, btnMul, btnDiv;
     TextView textResult;
-    String num1, num2;
+    String num1, num2, optAdd, optSub, optMul, optDiv;
+    TextView resultOption;
     Integer result;
 
     @Override
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         btnDiv = (Button) findViewById(R.id.BtnDiv);
 
         textResult = (TextView) findViewById(R.id.TextResult);
+        resultOption = (TextView) findViewById(R.id.TextOption);
 
         btnAdd.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 num1 = edit1.getText().toString();
                 num2 = edit2.getText().toString();
                 result = Integer.parseInt(num1) + Integer.parseInt(num2);
+                resultOption.setText("계산방식 : 더하기");
                 textResult.setText("계산결과 : " + result.toString());
                 return false;
             }
@@ -50,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 num1 = edit1.getText().toString();
                 num2 = edit2.getText().toString();
                 result = Integer.parseInt(num1) - Integer.parseInt(num2);
+                resultOption.setText("계산방식 : 빼기");
                 textResult.setText("계산결과 : " + result.toString());
                 return false;
             }
@@ -61,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 num1 = edit1.getText().toString();
                 num2 = edit2.getText().toString();
                 result = Integer.parseInt(num1) * Integer.parseInt(num2);
+                resultOption.setText("계산방식 : 곱하기");
                 textResult.setText("계산결과 : " + result.toString());
                 return false;
             }
@@ -72,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 num1 = edit1.getText().toString();
                 num2 = edit2.getText().toString();
                 result = Integer.parseInt(num1) / Integer.parseInt(num2);
+                resultOption.setText("계산방식 : 나누기");
                 textResult.setText("계산결과 : " + result.toString());
                 return false;
             }
